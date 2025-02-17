@@ -1,0 +1,9 @@
+apiVersion: petasus.io/v1beta1
+kind: AcceleratorConfig
+metadata:
+  labels:
+    app.kubernetes.io/name: accelerator-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: acceleratorconfig-sample
+spec:
+  # TODO(user): Add fields here

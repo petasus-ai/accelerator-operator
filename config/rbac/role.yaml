@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: accelerator-operator-role
+rules:
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs/status
+  verbs:
+  - get
+  - patch
+  - update

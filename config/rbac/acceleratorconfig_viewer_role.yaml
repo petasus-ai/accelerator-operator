@@ -1,0 +1,23 @@
+# permissions for end users to view acceleratorconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: accelerator-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: acceleratorconfig-viewer-role
+rules:
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs/status
+  verbs:
+  - get

@@ -1,0 +1,27 @@
+# permissions for end users to edit acceleratorconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: accelerator-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: acceleratorconfig-editor-role
+rules:
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - petasus.io
+  resources:
+  - acceleratorconfigs/status
+  verbs:
+  - get

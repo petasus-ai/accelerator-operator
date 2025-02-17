@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- v1beta1_acceleratorconfig.yaml
+- _v1beta1_acceleratorconfig.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
