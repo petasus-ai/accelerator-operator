@@ -4,11 +4,11 @@ accelerator-operator/
 ├── api/                                            # API 관련 코드            
 │   └── petasus/                                    #
 │       └── v1beta1/                                #
-│           └── acceleratorconfig_types.go      #
+│           └── acceleratorconfig_types.go          #
 ├── assets/                                         # 오퍼레이터가 관리할 에셋 매니페스트
-│   ├── vfio-manager/                               #
 │   └── rebellions/                                 # 리벨리온 관련 에셋
-│       ├── node-feature-discovery/                 #
+│       ├── vfio-manager/                           #
+│       ├── npu-feature-discovery/                  #
 │       ├── device-plugin/                          #
 │       ├── driver-manager/                         #
 │       └── metric-exporter/                        #
